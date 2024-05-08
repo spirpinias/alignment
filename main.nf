@@ -1,10 +1,10 @@
 #!/usr/bin/env nextflow
 
 params.reference = Channel
-    .fromPath('../Reads/GCF_000146045.2_R64_genomic.fa', type: 'file', checkIfExists: true)
+    .fromPath(params.sequence, type: 'file', checkIfExists: true)
 
 params.reads = Channel
-    .fromPath('../samplesheet.csv')
+    .fromPath(params.sample)
     .splitCsv(header:true)
     .map { row -> 
         [row.id, [file(row.fastq1), file(row.fastq2)]]
