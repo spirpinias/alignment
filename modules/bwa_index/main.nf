@@ -13,6 +13,6 @@ process bwa_index {
     output:
     tuple path('*.amb'), path('*.ann'), path('*.bwt'), path('*.pac'), path('*.sa')
 
-    script:
+    shell:
     template 'run_bwa_index.sh'
 }
