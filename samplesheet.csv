@@ -1,5 +1,5 @@
 id,fastq1,fastq2
-Sample_1,Sample1_R1.fastq.gz,Sample1_R2.fastq.gz
-Sample_2,Sample2_R1.fastq.gz,Sample2_R2.fastq.gz
-Sample_3,Reads/Sample3_R1.fastq.gz,Sample3_R2.fastq.gz
-Sample_4,Sample4_R1.fastq.gz,Sample4_R2.fastq.gz
+Sample_1,../data/Sample1_R1.fastq.gz,../data/Sample1_R2.fastq.gz
+Sample_2,../data/Sample2_R1.fastq.gz,../data/Sample2_R2.fastq.gz
+Sample_3,../data/Reads/Sample3_R1.fastq.gz,../data/Sample3_R2.fastq.gz
+Sample_4,../data/Sample4_R1.fastq.gz,../data/Sample4_R2.fastq.gz
