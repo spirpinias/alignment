@@ -15,6 +15,9 @@ process multiqc {
     output:
     path '*.html'
 
+    when:
+    task.ext.when == null || task.ext.when
+
     shell:
     template 'run_multiqc.sh'
 }
