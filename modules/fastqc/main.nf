@@ -13,6 +13,9 @@ process fastqc {
     output:
     path '*.zip'
 
+    when:
+    task.ext.when == null || task.ext.when
+
     shell:
     template 'run_fastqc.sh'
 }
