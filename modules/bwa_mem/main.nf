@@ -15,6 +15,9 @@ process bwa_mem {
     output:
     path '*'
 
+    when:
+    task.ext.when == null || task.ext.when
+
     shell:    
     template 'run_bwa_mem.sh'
 }
