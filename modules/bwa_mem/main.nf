@@ -5,19 +5,19 @@ process bwa_mem {
     errorStrategy { task.exitStatus in 137..140 ? 'retry' : 'ignore' }
     maxRetries 10
     
-    container "quay.io/biocontainers/bwa"
+	container "$REGISTRY_HOST/published/8df1a5c4-6068-4feb-a966-bfca076604ce:v1"
 
     publishDir "$RESULTS_PATH/Alignment"    
 
     input:
-    tuple path(index), val(id), path(reads)
+        tuple path(index), val(id), path(reads)
 
     output:
-    path '*'
+        path '*'
 
     when:
-    task.ext.when == null || task.ext.when
+        task.ext.when == null || task.ext.when
 
     shell:    
-    template 'run_bwa_mem.sh'
+        template 'run_bwa_mem.sh'
 }
