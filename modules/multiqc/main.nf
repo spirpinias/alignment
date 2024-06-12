@@ -5,7 +5,7 @@ process multiqc {
     errorStrategy { task.exitStatus in 137..140 ? 'retry' : 'ignore' }
     maxRetries 10
     
-    container "$REGISTRY_HOST/published/5960f4da-36d4-415f-9619-c578035da1fc:v1"
+    container "quay.io/biocontainers/fastqc"
     
     publishDir "$RESULTS_PATH/MultiQC"    
 
