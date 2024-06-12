@@ -5,17 +5,17 @@ process fastqc {
     errorStrategy { task.exitStatus in 137..140 ? 'retry' : 'ignore' }
     maxRetries 10
 
-    container "quay.io/biocontainers/fastqc"
+	container "$REGISTRY_HOST/published/a77487b1-1307-43b8-8f5a-b18255789cf3:v5"
         
     input:
-    tuple val(id), path(reads)
+        tuple val(id), path(reads)
 
     output:
-    path '*.zip'
+        path '*.zip'
 
     when:
-    task.ext.when == null || task.ext.when
+        task.ext.when == null || task.ext.when
 
     shell:
-    template 'run_fastqc.sh'
+        template 'run_fastqc.sh'
 }
