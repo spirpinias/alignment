@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-bwa index -p saccro !{reference}
+bwa index -p !{params.prefix_genome} !{reference}
