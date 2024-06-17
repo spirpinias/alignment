@@ -5,7 +5,7 @@ process bwa_mem {
     errorStrategy { task.exitStatus in 137..140 ? 'retry' : 'ignore' }
     maxRetries 10
     
-    container "community.wave.seqera.io/library/pip_bwa:5e24b616f03797f5"
+    container "quay.io/biocontainers/bwa"
 
     publishDir "$RESULTS_PATH/Alignment"    
 
