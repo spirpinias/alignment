@@ -11,10 +11,10 @@ params.reads = Channel
     }
 
 
-include { fastqc } from '../data/modules/fastqc'
-include { multiqc } from '../data/modules/multiqc'
-include { bwa_index } from '../data/modules/bwa_index'
-include { bwa_mem } from '../data/modules/bwa_mem'
+include { fastqc } from '../pipeline/modules/fastqc'
+include { multiqc } from '../pipeline/modules/multiqc'
+include { bwa_index } from '../pipeline/modules/bwa_index'
+include { bwa_mem } from '../pipeline/modules/bwa_mem'
 
 workflow {
     fastqc(params.reads) | collect | multiqc
