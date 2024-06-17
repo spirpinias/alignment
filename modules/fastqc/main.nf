@@ -5,7 +5,7 @@ process fastqc {
     errorStrategy { task.exitStatus in 137..140 ? 'retry' : 'ignore' }
     maxRetries 10
 
-    container "community.wave.seqera.io/library/fastqc:0.12.1--5cfd0f3cb6760c42"
+    container "quay.io/biocontainers/fastqc"
         
     input:
         tuple val(id), path(reads)
