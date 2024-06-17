@@ -5,7 +5,7 @@ process multiqc {
     errorStrategy { task.exitStatus in 137..140 ? 'retry' : 'ignore' }
     maxRetries 10
     
-    container "community.wave.seqera.io/library/pip_multiqc:2c2e276ad8997cc4"
+    container "quay.io/biocontainers/multiqc"
     
     publishDir "$RESULTS_PATH/MultiQC"    
 
