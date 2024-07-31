@@ -1,9 +1,6 @@
 process bwa_mem {
 
-    cpus = { 1 * task.attempt }
-    memory { 1.GB * task.attempt }
-    errorStrategy { task.exitStatus in 137..140 ? 'retry' : 'ignore' }
-    maxRetries 10
+    label "process_medium"
     
     container "quay.io/biocontainers/bwa"
 
