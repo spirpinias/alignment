@@ -1,1 +1,1 @@
-This is a simple nextflow pipeline in DSL2 with open source tools using dynamic memory.
+This is an example nextflow pipeline in DSL2 with open source tools.
