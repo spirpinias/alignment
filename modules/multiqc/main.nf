@@ -3,8 +3,6 @@ process multiqc {
     label "process_medium"
     
     container "biology/multiqc"
-    
-    publishDir "$RESULTS_PATH/MultiQC"    
 
     input: 
         path(zipz) 
