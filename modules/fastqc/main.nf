@@ -2,7 +2,7 @@ process fastqc {
 
     label "process_medium"
 
-    container "quay.io/biocontainers/fastqc"
+    container "pegi3s/fastqc"
         
     input:
         tuple val(id), path(reads)

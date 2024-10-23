@@ -2,7 +2,7 @@ process multiqc {
         
     label "process_medium"
     
-    container "quay.io/biocontainers/multiqc"
+    container "biology/multiqc"
     
     publishDir "$RESULTS_PATH/MultiQC"    
 

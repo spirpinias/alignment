@@ -2,9 +2,7 @@ process bwa_mem {
 
     label "process_medium"
     
-    container "quay.io/biocontainers/bwa"
-
-    publishDir "$RESULTS_PATH/Alignment"    
+    container "biology/bwa"    
 
     input:
         tuple path(index), val(id), path(reads)
