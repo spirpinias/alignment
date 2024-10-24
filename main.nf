@@ -3,8 +3,12 @@
 params.reads = Channel
     .fromPath(params.sample)
     .splitCsv(header:true)
-    .map { row -> 
-        [row.id, [file(row.fastq1), file(row.fastq2)]]
+    .map { 
+            row -> 
+            if (row.fastq2)
+                [[id:row.id, single_end:false], [file(row.fastq1), file(row.fastq2)]]
+            else
+                [[id:row.id, single_end:true], [file(row.fastq1)]]
     }
 
 
@@ -17,5 +21,4 @@ workflow {
     clean_reads=fastp(params.reads)
     clean_reads.json | collect | multiqc
     bwa_index(params.reference) | toList | combine(clean_reads.reads) | bwa_mem
-    
 }

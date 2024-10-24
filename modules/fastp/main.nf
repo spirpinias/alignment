@@ -5,10 +5,10 @@ process fastp {
     container "nanozoo/fastp"
         
     input:
-        tuple val(id), path(reads)
+        tuple val(meta), path(reads)
 
     output:
-        tuple val(id), path('*.fastp.fastq.gz'), emit: reads
+        tuple val(meta), path('*.fastp.fastq.gz'), emit: reads
         path('*.json'), emit: json
         path('*.html'), emit: html
 

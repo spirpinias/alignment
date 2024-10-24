@@ -6,7 +6,7 @@ process bwa_mem {
     publishDir "/home/stephen/Desktop/TEST"
 
     input:
-        tuple path(index), val(id), path(reads)
+        tuple path(index), val(meta), path(reads)
 
     output:
         path '*'
