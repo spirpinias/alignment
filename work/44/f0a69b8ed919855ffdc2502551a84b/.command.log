@@ -1,0 +1,9 @@
+
+/// MultiQC v1.25.1
+
+       file_search | Search path: /home/stephen/Desktop/alignment/work/44/f0a69b8ed919855ffdc2502551a84b/Sample4.json
+       file_search | Search path: /home/stephen/Desktop/alignment/work/44/f0a69b8ed919855ffdc2502551a84b/Sample2.json
+             fastp | Found 2 reports
+     write_results | Data        : multiqc_data
+     write_results | Report      : multiqc_report.html
+           multiqc | MultiQC complete

@@ -1,0 +1,41 @@
+Read1 before filtering:
+total reads: 81048
+total bases: 6078600
+Q20 bases: 5872596(96.611%)
+Q30 bases: 5702254(93.8087%)
+
+Read2 before filtering:
+total reads: 81048
+total bases: 6078600
+Q20 bases: 5793444(95.3089%)
+Q30 bases: 5579747(91.7933%)
+
+Read1 after filtering:
+total reads: 81048
+total bases: 6077785
+Q20 bases: 5871809(96.611%)
+Q30 bases: 5701491(93.8087%)
+
+Read2 aftering filtering:
+total reads: 81048
+total bases: 6077785
+Q20 bases: 5792668(95.3089%)
+Q30 bases: 5579006(91.7934%)
+
+Filtering result:
+reads passed filter: 162096
+reads failed due to low quality: 0
+reads failed due to too many N: 0
+reads failed due to too short: 0
+reads with adapter trimmed: 74
+bases trimmed due to adapters: 1630
+
+Duplication rate: 0%
+
+Insert size peak (evaluated by paired-end reads): 119
+
+JSON report: Sample4.json
+HTML report: Sample4.html
+
+fastp --in1 Sample4_R1.fastq.gz --in2 Sample4_R2.fastq.gz --out1 Sample4_R1.fastp.fastq.gz --out2 Sample4_R2.fastp.fastq.gz -j Sample4.json -h Sample4.html -w 2 
+fastp v0.20.0, time used: 1 seconds

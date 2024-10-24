@@ -1,0 +1,3 @@
+Module	Section	Sample Name	Source
+fastp	all_sections	Sample4	/home/stephen/Desktop/alignment/work/44/f0a69b8ed919855ffdc2502551a84b/Sample4.json
+fastp	all_sections	Sample2	/home/stephen/Desktop/alignment/work/44/f0a69b8ed919855ffdc2502551a84b/Sample2.json

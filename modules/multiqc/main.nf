@@ -3,12 +3,13 @@ process multiqc {
     label "process_medium"
     
     container "biology/multiqc"
+    publishDir "/home/stephen/Desktop/TEST"
 
     input: 
-        path(zipz) 
+        path(jsons) 
 
     output:
-        path '*.html'
+        path '*'
 
     when:
         task.ext.when == null || task.ext.when

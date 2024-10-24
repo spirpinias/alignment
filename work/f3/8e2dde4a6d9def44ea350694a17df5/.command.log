@@ -1,0 +1,9 @@
+[bwa_index] Pack FASTA... 0.20 sec
+[bwa_index] Construct BWT for the packed sequence...
+[bwa_index] 8.03 seconds elapse.
+[bwa_index] Update BWT... 0.04 sec
+[bwa_index] Pack forward-only FASTA... 0.04 sec
+[bwa_index] Construct SA from BWT and Occ... 2.12 sec
+[main] Version: 0.7.17-r1188
+[main] CMD: bwa index -p saccro /home/stephen/Desktop/alignment/Reads/GCF_000146045.2_R64_genomic.fa
+[main] Real time: 10.606 sec; CPU: 10.435 sec

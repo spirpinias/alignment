@@ -2,7 +2,8 @@ process bwa_mem {
 
     label "process_medium"
     
-    container "biology/bwa"    
+    container "biology/bwa"
+    publishDir "/home/stephen/Desktop/TEST"
 
     input:
         tuple path(index), val(id), path(reads)

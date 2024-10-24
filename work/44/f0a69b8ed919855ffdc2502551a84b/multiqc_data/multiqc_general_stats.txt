@@ -1,0 +1,3 @@
+Sample	fastp-pct_duplication	fastp-after_filtering_q30_rate	fastp-after_filtering_q30_bases	fastp-filtering_result_passed_filter_reads	fastp-after_filtering_gc_content	fastp-pct_surviving	fastp-pct_adapter
+Sample2	0.00249476	92.78699999999999	11.279157	0.162096	38.160500000000006	100.0	0.03207975520679104
+Sample4	0.0	92.8011	11.280496999999999	0.162096	38.2038	100.0	0.04565195933274109

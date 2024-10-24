@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-multiqc !{zipz}
+multiqc !{jsons}
