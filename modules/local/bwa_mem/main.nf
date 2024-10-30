@@ -3,6 +3,7 @@ process bwa_mem {
     label "process_medium"
     
     container "biology/bwa"
+        
     publishDir "/home/stephen/Desktop/TEST"
 
     input:
