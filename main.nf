@@ -17,7 +17,10 @@ workflow {
                     [[id:row.id, single_end:true], [file(row.fastq1)]]
         }
     
+    reference= Channel
+        .fromPath(params.reference)
+
     // Pass to the Pipeline
-    
-    example(reads)
+
+    example(reads,reference)
 }
