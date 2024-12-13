@@ -7,6 +7,7 @@ include { samtools_ref_index } from '../modules/local/samtools_ref_index'
 include { samtools_dict } from '../modules/local/samtools_dict'
 include { mutect2 } from '../modules/local/mutect2'
 include { AddOrReplaceRG } from '../modules/local/AddOrReplaceRG'
+include { bcftools } from '../modules/local/bcftools/main.nf'
 
 workflow example {
 
@@ -28,5 +29,8 @@ workflow example {
         clean_alignments = AddOrReplaceRG(alignments.bam_val)
 
        // Create the VCF
-        reference | toList | combine(index.index) | combine(dict.dict) | combine(clean_alignments) | mutect2
+        vcf = reference | toList | combine(index.index) | combine(dict.dict) | combine(clean_alignments) | mutect2
+
+        // Index the VCF
+        vcf.vcf | bcftools
 }
