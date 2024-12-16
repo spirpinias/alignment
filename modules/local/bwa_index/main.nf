@@ -13,6 +13,6 @@ process bwa_index {
     when:
         task.ext.when == null || task.ext.when
     
-    shell:
+    script:
         template 'run_bwa_index.sh'
 }

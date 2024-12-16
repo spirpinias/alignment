@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-multiqc !{jsons}
+multiqc ${jsons}

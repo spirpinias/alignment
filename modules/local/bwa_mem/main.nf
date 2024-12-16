@@ -16,6 +16,6 @@ process bwa_mem {
     when:
         task.ext.when == null || task.ext.when
 
-    shell:    
+    script:    
         template 'run_bwa_mem.sh'
 }

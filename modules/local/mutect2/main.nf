@@ -15,6 +15,6 @@ process mutect2 {
     when:
         task.ext.when == null || task.ext.when
 
-    shell:
+    script:
         template 'run_mutect2.sh'
 }

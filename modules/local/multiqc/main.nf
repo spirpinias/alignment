@@ -14,6 +14,6 @@ process multiqc {
     when:
         task.ext.when == null || task.ext.when
 
-    shell:
+    script:
         template 'run_multiqc.sh'
 }

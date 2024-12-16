@@ -7,7 +7,7 @@ include { samtools_ref_index } from '../modules/local/samtools_ref_index'
 include { samtools_dict } from '../modules/local/samtools_dict'
 include { mutect2 } from '../modules/local/mutect2'
 include { AddOrReplaceRG } from '../modules/local/AddOrReplaceRG'
-include { bcftools } from '../modules/local/bcftools/main.nf'
+include { bcftools } from '../modules/local/bcftools'
 
 workflow example {
 
