@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com///nextflow_schema.json",
+  "title": " My Pipeline Parameters",
+  "description": "An example nextflow pipeline processing NGS",
+  "type": "object",
+  "properties": {
+    "sample": {
+      "type": "string"
+    },
+    "reference": {
+      "type": "string"
+    },
+    "prefix_genome": {
+      "type": "string"
+    },
+    "max_memory": {
+      "type": "integer",
+      "default": 8
+    },
+    "max_cpus": {
+      "type": "integer",
+      "default": 4
+    },
+    "max_time": {
+      "type": "string",
+      "default": "2h"
+    }
+  }
+}
