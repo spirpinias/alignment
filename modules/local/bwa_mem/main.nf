@@ -1,8 +1,6 @@
 process bwa_mem {
 
     label "process_medium"
-    
-    container "biology/bwa"
         
     input:
         tuple path(index), val(meta), path(reads)

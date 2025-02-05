@@ -19,7 +19,7 @@ workflow example {
         // Clean The Reads and MultiQC
         clean_reads = fastp(reads)
         clean_reads.json | collect | multiqc
-
+        
         // Index and Create Dictionaries for GATK
         index = samtools_ref_index(reference)
         dict = samtools_dict(reference)
@@ -33,9 +33,10 @@ workflow example {
 
         // Index the VCF
         index_vcf = vcf.vcf | bcftools
-
+        
 
     publish:
         index_vcf >> 'VCF'
         alignments >> 'Alignments'
+        
 }

@@ -2,8 +2,6 @@ process bwa_index {
     
     label "process_medium"
 
-    container "biology/bwa"
-
     input:
         path(reference)
 

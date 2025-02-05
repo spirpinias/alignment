@@ -1,9 +1,6 @@
 process multiqc {
         
     label "process_medium"
-    
-    container "biology/multiqc"
-    publishDir "/home/stephen/Desktop/TEST"
 
     input: 
         path(jsons) 
