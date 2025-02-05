@@ -4,8 +4,6 @@ process mutect2 {
     
     container "broadinstitute/gatk"
 
-    publishDir "/home/stephen/Desktop/TEST/VCF"
-
     input:
         tuple path(reference), path(index), path(dict), path(alignments), val(sample)
 
