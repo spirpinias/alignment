@@ -4,8 +4,6 @@ process bcftools {
     
     container "biology/bcftools"
         
-    publishDir "/home/stephen/Desktop/TEST/IndexVCF/"
-
     input:
         path(vcf_files)
 

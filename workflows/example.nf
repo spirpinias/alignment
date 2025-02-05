@@ -32,5 +32,10 @@ workflow example {
         vcf = reference | toList | combine(index.index) | combine(dict.dict) | combine(clean_alignments) | mutect2
 
         // Index the VCF
-        vcf.vcf | bcftools
+        index_vcf = vcf.vcf | bcftools
+
+
+    publish:
+        index_vcf >> 'VCF'
+        alignments >> 'Alignments'
 }

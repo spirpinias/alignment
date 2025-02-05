@@ -4,8 +4,6 @@ process bwa_mem {
     
     container "biology/bwa"
         
-    publishDir "/home/stephen/Desktop/TEST/Alignments"
-
     input:
         tuple path(index), val(meta), path(reads)
 
