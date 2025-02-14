@@ -2,4 +2,4 @@
 
 bwa index \
 -p ${params.prefix_genome} \
-${params.reference}
+${reference}
