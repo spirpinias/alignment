@@ -8,6 +8,7 @@ include { samtools_dict } from '../modules/local/samtools_dict'
 include { mutect2 } from '../modules/local/mutect2'
 include { AddOrReplaceRG } from '../modules/local/AddOrReplaceRG'
 include { bcftools } from '../modules/local/bcftools'
+include { TILEDBVCF_CREATE } from '../modules/local/TILEDBVCF_CREATE'
 
 workflow example {
 
@@ -33,10 +34,14 @@ workflow example {
 
         // Index the VCF
         index_vcf = vcf.vcf | bcftools
-        
 
-    publish:
-        index_vcf >> 'VCF'
+
+        // Create the Database
+        // TILEDBVCF_CREATE(uri)
+
+    publish:   
+        
+        index_vcf >> 'VCF'            
         alignments >> 'Alignments'
         
 }
