@@ -8,7 +8,7 @@ process mutect2 {
         tuple path(reference), path(index), path(dict), path(alignments), val(sample)
 
     output:
-        path('*.vcf.gz'), emit: vcf
+        path('*gvcf.gz'), emit: vcf
 
     when:
         task.ext.when == null || task.ext.when
