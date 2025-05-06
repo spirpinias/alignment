@@ -22,7 +22,6 @@ workflow example {
         // Create the TileDB-VCF Array
         TILEDBVCF_CREATE(uri)
         
-        /*
         // Clean The Reads and MultiQC
         clean_reads = fastp(reads)
         clean_reads.json | collect | multiqc
@@ -45,5 +44,4 @@ workflow example {
         
         index_vcf >> 'VCF'            
         alignments >> 'Alignments'
-        */
 }
