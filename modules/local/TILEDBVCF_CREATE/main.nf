@@ -1,5 +1,6 @@
 process TILEDBVCF_CREATE {
-    publishDir 's3://stephen-pirpinias-dev'
+    
+    publishDir "${params.outdir}"
         
     label "process_medium"
 

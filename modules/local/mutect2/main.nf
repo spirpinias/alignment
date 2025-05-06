@@ -1,5 +1,7 @@
 process mutect2 {
         
+    publishDir "${params.outdir}/VCF"
+    
     label "process_medium"
     
     container "broadinstitute/gatk"

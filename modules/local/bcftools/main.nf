@@ -1,5 +1,7 @@
 process bcftools {
 
+    publishDir "${params.outdir}/VCF"
+    
     label "process_medium"
     
     container "biology/bcftools"
