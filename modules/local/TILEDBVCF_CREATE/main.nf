@@ -1,10 +1,14 @@
 process TILEDBVCF_CREATE {
+    publishDir 's3://stephen-pirpinias-dev'
         
     label "process_medium"
 
     input: 
-        path(uri) 
-
+        val(uri) 
+    
+    output:
+        path "${uri}", type:'dir'
+    
     when:
         task.ext.when == null || task.ext.when
 

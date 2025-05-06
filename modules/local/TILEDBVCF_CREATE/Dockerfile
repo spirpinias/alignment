@@ -36,5 +36,3 @@ RUN cd TileDB-VCF/libtiledbvcf
 RUN mkdir build && cd build
 RUN cmake TileDB-VCF/libtiledbvcf/ && make -j8
 RUN make install-libtiledbvcf
-
-RUN PATH=$PATH:/libtiledbvcf/src
