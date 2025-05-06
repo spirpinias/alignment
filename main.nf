@@ -20,11 +20,8 @@ workflow {
     reference = Channel
         .fromPath(params.reference)
 
-    /*
     uri = Channel
-        .fromPath(params.uri)
+        .from(params.uri)
     
-    // Pass to the Pipeline
-    */
-    example(reads,reference)
+    example(reads, reference, uri)
 }
