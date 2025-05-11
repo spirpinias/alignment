@@ -1,0 +1,5 @@
+sample: './samplesheet.csv'
+reference: './assets/GCF_000146045.2_R64_genomic.fa'
+prefix_genome: 'saccro'
+uri: 'TileDB-VCF-SRR2'
+outdir: 's3://stephen-pirpinias-dev'
