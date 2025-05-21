@@ -1,7 +1,7 @@
 process TILEDBVCF_CREATE {
     publishDir 's3://stephen-pirpinias-dev'
         
-    label "process_medium"
+    label "process_single"
 
     input: 
         val(uri) 
